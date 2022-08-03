@@ -1,0 +1,1235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to right, #1d2b64, #f8cdda 190%);
+}
+.nav-item{
+    color: #a77748;
+}
+nav{
+    display: flex;
+    margin: 40px 0px 0px -20px;
+    align-items: center;
+    margin-left: 60px;
+}
+.nav-item{
+    margin-right: 77px;
+    cursor: pointer;
+    font-family: roboto;
+    font-size: 20px;
+    /* color: #283278; */
+}
+nav a:hover{
+    transition: all 0.3s;
+    color: #F7A654;
+
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color: #000;
+    color: #F7A654;
+    font-size: 16px;
+    min-width: 150px;
+    z-index: 999;
+    margin-left:40px;
+    list-style-type: none;
+    border-radius: 3px;
+    background-image: linear-gradient(to top right, #6b3c0d,#233C7B 70%);
+    background-clip: text;
+}
+.dropdown-menu li{
+    margin-top: 8px;
+    padding: 5px;
+}
+.dropdown-menu li:hover{
+    background-color:#0288D1;
+    color:#F7A654;
+    border-radius: 5px;
+}
+.courses:hover .dropdown-menu{
+    display: block;
+}
+.logo{
+    margin: 30px 0px 0px 60px;
+    width: 15%;
+    border-radius: 5px;
+    background-image: linear-gradient(to top right, #F7A654,#233C7B);
+    filter: brightness(150%);
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+}
+.logo-2{
+    position: absolute;
+    width: 30px;
+    z-index: 1 ;
+    margin-top: 23px;
+    margin-left: -79.5px;
+    transform: translate(50%, 50%);
+    animation: rotate 10s infinite linear;
+}
+@keyframes rotate{
+    0%{
+        transform: translate(50%, 50%) rotate(0deg);
+    }
+    0%{
+        transform: translate(50%, 50%) rotate(-360deg);
+    }
+}
+input{
+    position: absolute;
+    height: 40px;
+    width: 650px;
+    margin-left: 40px;
+    margin-top: 35px;
+    border: 1.5px solid #233C7B;
+    border-radius: 4px;
+    outline: none;
+    opacity: .8;
+}
+input[type="text"]{
+    padding-left: 40px;
+    color: #000000;
+    font-size: 18px;
+}
+.fa-solid{
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 50px;
+    font-size: 19px;
+    z-index: 1;
+    border: 1px;
+    color: #233C7B;
+}
+input[type="text"]::placeholder{
+    font-size: 16px;
+    color: #233C7B;
+}
+header button{
+    display: flex;
+    float: right;
+    padding: 8px 15px;
+    margin: 38px 10px 0px 5px;
+    border-radius: 5px;
+    border: none;
+
+}
+header button:hover{
+    transition: all 0.3s;
+    background-color: #233C7B;
+    color: #F7A654;
+}
+.sign-up{
+    font-family: roboto;
+    font-weight: 200;
+    font-size: 16px;
+    background-color: #F7A654;
+    color: #233C7B;
+    cursor: pointer;
+
+}
+.sign-in{
+    font-family: roboto;
+    font-weight: 200;
+    font-size: 16px;
+    background-color: #F7A654;
+    color: #233C7B;
+    cursor: pointer;
+}
+.home-img{
+    width: 750px;
+    float: right;
+}
+.header-text{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    margin-top: 200px;
+    left: 60px;
+    font-family: roboto;
+}
+.header-text p{
+    padding-bottom: 40px;
+    font-size: 20px;
+    background-image: linear-gradient(90deg, #F7A654,#698ff0);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    overflow: hidden;
+}
+.header-text span{
+    height: 2px;
+    width: 150px;
+    background-color: #F7A654;
+    position: absolute;
+    margin-top: -30px;
+}
+.header-text .text-header{
+    font-size: 45px;
+    background-image: linear-gradient(90deg, #F7A654,#698ff0);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    overflow: hidden;
+}
+.text-1 {
+    animation: text1;
+}
+.text-2 {
+    animation: text2;
+}
+.text-1,
+.text-2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  animation-duration:9s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+.text-1::after,
+.text-2::after {
+    content: "|";
+    color: rgb(191, 190, 183);
+    left: 100px;
+    position: absolute;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+    }
+
+@keyframes text1 {
+    0%,
+    50%,
+    100%
+    {
+    width: 0;
+    }
+    10%,
+    40%
+    {
+    width: 10em;
+    }
+}
+@keyframes text2 {
+    0%,
+    50%,
+    100%
+    {
+    width: 0;
+    }
+    60%,
+    90%
+    {
+    width: 27rem;
+    }
+}
+@keyframes caret {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Hard work section*/
+.hard-work{
+    position: absolute;
+    margin-top: 100px;
+    text-align: center;
+    padding-bottom: 200px;
+}
+.hard-work .head h1{
+    font-family: roboto;
+    font-size: 38px;
+    color: #233C7B;
+}
+.hard-work .cards{
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    gap: 4.5rem;
+}
+.hard-work .card:hover{
+
+    box-shadow: 0px 0px 10px 0px rgb(241, 238, 238);
+    transform: scale(1);
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+.hard-work .card{
+    padding-top: 50px;
+    height: 300px;
+    width: 18rem;
+    margin-left: 20px;
+    font-family: roboto;
+    border-radius: 10px;
+    transition: transform 1s, filter 1s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(50%);
+}
+.hard-work .card h4{
+    padding-top: 40px;
+    font-size: 35px;
+    color: #233C7B;
+}
+.hard-work .card p{
+    padding-top: 20px;
+    font-size: 27px;
+    color: #00000061;
+}
+.hard-work .card img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+/* Achivers */
+.achivers{
+    margin-top: 200px;
+    height: 400px;
+    width: 1349px;
+    background-color:#EEF0F5;
+    box-shadow: 0px 0px .5px 0px;
+    border-radius: 10px;
+    margin-bottom: 140px;
+}
+.achiver-text{
+    padding-top: 80px;
+}
+.achiver-text h1{
+    font-size: 38px;
+    font-family: roboto;
+    color: #233C7B;
+    margin-top: 20px;
+}
+marquee img{
+    margin-top: 60px;
+    width: 100px;
+    margin-left: 70px;
+}
+
+  /* Fame Section */
+.fame{
+    padding-bottom: 100px;
+    position: absolute;
+}
+.fame-txt{
+    font-size: 40px;
+    font-family: poppins;
+    padding-bottom: 20px;
+    color: #233C7B;
+}
+.fame-cards{
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+    gap: 4.5rem;
+}
+.fame-cards .card .fa-linkedin{
+    font-size: 25px;
+    color: #0288D1;
+}
+.fame-cards .card{
+    margin-top: 50px;
+    height: 300px;
+    width: 18rem;
+    margin-left: -40px;
+    font-family: poppins;
+    box-shadow: 0px 0px 10px 0px rgb(241, 238, 238);
+    border-radius: 10px;
+    padding: 20px;
+}
+.fame-cards .card h4{
+    padding-top: 30px;
+    font-size: 35px;
+    color: #233C7B;
+}
+.fame-cards .card p{
+    padding-top: 20px;
+    font-size: 16px;
+    color: #00000061;
+}
+.fame-cards .card .img{
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+    border-radius: 50px;
+    background-color: rgb(152, 143, 143);
+}
+.view-more{
+    margin-top: 40px;
+    font-family: roboto;
+    font-weight: 200;
+    font-size: 18px;
+    padding-bottom: 100px;
+}
+.view-more a{
+    text-decoration: none;
+    color: #F7A654;
+}
+
+/* What you will learn */
+.learn{
+    margin-top: 70px;
+    height: 60vh;
+}
+.learn .learn-text h1{
+    font-family: poppins;
+    font-size: 42px;
+    margin-bottom: 70px;
+    color: #233C7B;
+}
+.learn .button-group .buttons button{
+    padding: 8px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgb(241, 238, 238);
+    background-color: rgb(255, 255, 255);
+}
+.learn .button-group .buttons .btn-group{
+    font-size: 20px;
+    font-family: poppins;
+    font-weight: 600;
+    color: #000000
+}
+.learn .button-group .buttons .btn-group:hover{
+    transition: all 0.3s;
+    background-color: #233C7B;
+    color: #F7A654;
+}
+.learn .button-group .buttons .btn-group-active{
+    font-size: 20px;
+    font-family: poppins;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #233C7B;
+}
+.learn .button-group .buttons .btn-group-active{
+    color: #F7A654;
+}
+
+/* Live Programs */
+.live-programs{
+    margin-top: 190%;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+.live-head h1{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 38px;
+    font-family: poppins;
+    color: #233C7B;
+}
+.live-head p{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 20px;
+    font-family: poppins;
+    color: #00000089;
+}
+.live-cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+    gap: 4rem;
+}
+.live-cards .card{
+    margin-top: 50px;
+    height: 380px;
+    width: 19rem;
+    margin-left: -40px;
+    font-family: poppins;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 1s, filter 1s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(50%);
+}
+.live-cards .card:hover{
+    box-shadow: 0px 0px 10px 0px rgb(241, 238, 238);
+    transform: scale(1);
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+.live-cards .card h4{
+    padding-top: 20px;
+    font-size: 20px;
+    color: #233C7B;
+}
+.live-cards .card p{
+    padding-top: 20px;
+    font-size: 16px;
+    color: #00000061;
+}
+.live-cards .card .live-img{
+    height: 180px;
+    width: 320px;
+    margin-left: -9px;
+    overflow: hidden;
+}
+.live-cards .card .live-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 9px;
+    object-fit: cover;
+}
+.live-cards .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.live-cards .card .price .amount h4 {
+    font-size: 25px;
+}
+.live-cards .card .price .live-status a {
+    font-size: 13px;
+    padding: 5px 9px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #7aef72;
+    color: #233C7B;
+    text-decoration: none;
+    outline: none;
+}
+.live-programs .view-more{
+    margin-top: 40px;
+    font-family: roboto;
+    font-weight: 200;
+    font-size: 18px;
+    padding-bottom: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+.live-programs .view-more a{
+    text-decoration: none;
+}
+
+/* Hackathon */
+.hackathon{
+    margin-top: 90px;
+    height: 350px;
+    width: 1349px;
+    background-color:#EEF0F5;
+    box-shadow: 0px 0px .5px 0px;
+    border-radius: 10px;
+    margin-bottom: 140px;
+}
+.hackathon-text{
+    padding-top: 80px;
+    text-align: center;
+}
+.hackathon-text h1{
+    font-size: 38px;
+    font-family: roboto;
+    color: #233C7B;
+    margin-top: 20px;
+}
+.hackathon marquee img{
+    margin-top: 60px;
+    width: 200px;
+    margin-left: 70px;
+}
+
+  /* Product Section */
+.our-products{
+    position: absolute;
+    text-align: center;
+    padding-bottom: 200px;
+}
+.our-products .product h1{
+    font-family: roboto;
+    font-size: 38px;
+    color: #233C7B;
+}
+.our-products .product-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    gap: 5rem 2rem;
+}
+.our-products .card{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: 300px;
+    width: 18rem;
+    font-family: roboto;
+}
+.our-products .card h4{
+    padding-top: 40px;
+    font-size: 26px;
+    color: #233C7B;
+}
+.our-products .card p{
+    padding-top: 20px;
+    font-size: 16px;
+    color: #00000061;
+}
+
+/* Tech Avengers */
+.tech-avengers{
+    margin-top: 88%;
+    height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-color: #233C7B;
+    border-radius: 10px;
+}
+.tech-avengers .avenger-head h1{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 38px;
+    font-family: poppins;
+    color: #F7A654;
+}
+.tech-avengers .avenger-cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+    gap: 4.5rem;
+}
+.tech-avengers .avenger-cards .card{
+    margin-top: 50px;
+    height: 360px;
+    text-align: center;
+    width: 18rem;
+    margin-left: -40px;
+    font-family: poppins;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 1s, filter 1s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(60%);
+}
+
+.tech-avengers .avenger-cards .card:hover{
+    box-shadow: 0px 0px 10px 0px rgb(241, 238, 238);
+    transform: scale(1);
+    filter: brightness(100%);
+    transform: scale(1.3);
+}
+.tech-avengers .avenger-cards .card h4{
+    padding-bottom: 5px;
+    font-size: 26px;
+    color: #F7A654;
+}
+.tech-avengers .avenger-cards .card p{
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ededed61;
+}
+.tech-avengers .avenger-cards .card .card-img{
+    margin-bottom: 30px;
+    margin-left: 60px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.tech-avengers .avenger-cards .card .card-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: #EEF0F5;
+}
+.tech-avengers .avenger-cards .card .icon .fa-linkedin{
+    margin-right: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+    color: #0288D1;
+}
+.tech-avengers .avenger-cards .card .icon .fa-youtube{
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+    color: #FF3D00;
+}
+
+/* Our Partners */
+.our-partners{
+    margin-top: 20%;
+    height: 100vh;
+    padding-bottom: 50px;
+}
+.our-partners .partner-head h1{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 38px;
+    font-family: poppins;
+    color: #233C7B;
+}
+.our-partners .partner-cards{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.our-partners .partner-cards .card .card-img{
+    margin-bottom: 30px;
+    width: 200px;
+    height: 200px;
+    background-color: #f5f5f55d;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.our-partners .partner-cards .card .card-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+.footer{
+    margin-top: 150px;
+    background-color: #233C7B;
+    padding-top: 50px;
+    height: 70vh;
+}
+.footer .footer-cards{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.footer .footer-cards .card .card-img{
+    margin-bottom: 30px;
+    margin-left: -40px;
+}
+.footer .footer-cards .card .card-img .icons{
+    position: relative;
+    margin-top: -35px;
+    margin-left: 180px;
+}
+.footer .footer-cards .card .card-img span{
+    position: absolute;
+    margin-top: 15px;
+    height: 2px;
+    width: 315px;
+    background-color: #F7A654;
+}
+.footer .footer-cards .card .card-img .fa-brands{
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 22px;
+}
+.footer .footer-cards .card p{
+    color: #ffffff;
+    margin: 20px 0px 0px 10px;
+    font-family: poppins;
+    line-height: 20px;
+    font-size: 14px;
+}
+.footer .footer-cards .card h4{
+    color: #ffffff;
+    margin: 20px 0px 0px 10px;
+    font-family: poppins;
+    font-size: 20px;
+}
+.footer .footer-cards .card h4 span{
+    position: absolute;
+    margin: 30px 0px 0px -100px;
+    height: 2px;
+    width: 130px;
+    background-color: #F7A654;
+}
+.footer .footer-cards .card p .fa-location-dot{
+    position: absolute;
+    margin: 20px 0px 0px -50px;
+    color: #ffffff;
+}
+.footer .footer-cards .card p .fa-envelope{
+    position: absolute;
+    margin: 0px 0px 0px -50px;
+    color: #ffffff;
+}
+.iso-logo img{
+    position: absolute;
+    width: 90px;
+    margin-left: 70px;
+}
+.copy-right{
+    color: #ffffff;
+    font-size: 14px;
+    font-family: poppins;
+    position: absolute;
+    margin: 8.5% 0% 0%45%;
+}
+
+
+/* Media queries for 420px*/
+
+/* Nav Bar */
+@media only screen and (max-width: 420px) {
+nav {
+    display: none;
+}
+
+.logo{
+    margin: 30px 0px 0px 30px;
+    width: 35%;
+    z-index: -1;
+}
+.logo-2{
+    position: absolute;
+    width: 25px;
+    z-index: 1 ;
+    margin-top: 22px;
+    margin-left: -62px;
+    transform: translate(50%, 50%);
+    animation: rotate 10s infinite linear;
+}
+.sign-up,.sign-in {
+    font-size: 10px;
+    padding: 5px 8px;
+}
+}
+
+/* Input bar */
+@media screen and (max-width:420px) {
+input{
+    height: 30px;
+    width: 250px;
+    margin: 100px 40px 0px -110px;
+}
+input[type="text"]{
+    padding-left: 40px;
+}
+.fa-solid{
+    margin: 107px 40px 0px -95px;
+}
+}
+
+/* Home section */
+@media screen and (max-width:420px){
+.home-img{
+    position: relative;
+}
+.header-text p{
+    margin-left: -20px;
+    margin-top: 240px;
+    font-size: 22px;
+}
+.header-text span{
+    margin-left: -20px;
+
+}
+.home-img{
+    margin-top: 120px;
+    width: 470px;
+    margin-right: -20px;
+}
+.header-text .text-1{
+    position: absolute;
+    font-size: 26px;
+    margin-left: -30px;
+}
+.header-text .text-2{
+    position: absolute;
+    display: block;
+    margin: 70px 0px 0px -20px;
+    font-size: 30px;
+    animation: none;
+}
+}
+/* Hard work */
+@media screen and (max-width:420px) {
+.hard-work .head h1 {
+    position: relative;
+    font-size: 26px;
+    float: left;
+    margin-left: 25px;
+    justify-content: center;
+}
+.hard-work .cards{
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+.hard-work .card{
+    height: 200px;
+    width: 16rem;
+    font-family: roboto;
+}
+.hard-work .card h4{
+    padding-top: 19px;
+    font-size: 26px;
+}
+.hard-work .card p{
+    padding-top: 20px;
+    font-size: 18px;
+}
+.hard-work .card img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
+}
+
+/* Achivers */
+@media screen and (max-width:420px) {
+.achivers{
+    position: absolute;
+    margin-top: 270%;
+    height: 200px;
+    width: 410px;
+}
+.achiver-text h1{
+    font-size: 26px;
+    margin-top: -45px;
+}
+marquee img{
+    margin-top: 20px;
+    width: 70px;
+    margin-left: 70px;
+}
+}
+
+/* Hall of Fame */
+@media screen and (max-width:420px) {
+.fames{
+    margin-top: 340%;
+}
+.fame-txt{
+     position: relative;
+    font-size: 26px;
+    margin-top: 10px;
+    text-align: center;
+}
+.fame-cards{
+    flex-direction: column;
+    gap: 20px;
+}
+.fame-cards .card{
+    height: 220px;
+    width: 14rem;
+    font-family: poppins;
+    box-shadow: 0px 0px 10px 0px rgb(241, 238, 238);
+    border-radius: 10px;
+    margin-left: -60px;
+}
+.fame-cards .card .fa-linkedin{
+    font-size: 20px;
+    color: #0288D1;
+}
+.fame-cards .card h4{
+    font-size:26px;
+}
+.fame-cards .card p{
+    margin-top: -10px;
+    font-size: 16px;
+    color: #00000061;
+}
+.fame-cards .card .img{
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+    border-radius: 50px;
+    background-color: rgb(152, 143, 143);
+}
+.view-more{
+    font-size: 15px;
+}
+}
+
+/* What you will learn */
+@media screen and (max-width:420px) {
+
+.learn{
+     margin-top: 10%;
+    position: absolute;
+    max-width: 760px;
+}
+.learn .learn-text h1{
+    position: relative;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 26px;
+}
+.learn .button-group .buttons button{
+    display: flex;
+    flex-direction: column;
+}
+.learn .button-group .buttons .btn-group{
+    margin: 10px 0px 0px 70px;
+    font-size: 20px;
+}
+.learn .button-group .buttons .btn-group-active{
+    font-size: 20px;
+    margin: 10px 0px 0px 70px;
+}
+}
+
+/* live Programs */
+@media screen and (max-width:420px) {
+    .live-programs{
+    margin-top: 810%;
+}
+.live-head h1{
+    font-size: 26px;
+}
+.live-head p{
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.live-cards{
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+.live-cards .card{
+    margin-top: 10px;
+    height: 300px;
+    width: 17rem;
+    overflow: hidden;
+}
+.live-cards .card h4{
+    font-size: 18px;
+}
+.live-cards .card p{
+    font-size: 16px;
+}
+.live-cards .card .live-img{
+    height: 150px;
+    width: 297px;
+    margin-left: -13px;
+    overflow: hidden;
+}
+.live-cards .card .live-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.live-cards .card .price .amount h4, .view-more {
+    font-size: 16px;
+}
+.live-cards .card.view-more {
+    font-size: 22px;
+}
+.live-cards .card .price .live-status a {
+    font-size: 10px;
+}
+}
+
+/* Hackathon */
+@media screen and (max-width:420px) {
+.hackathon{
+    margin-top: 0px;
+    position: absolute;
+    height: 200px;
+    width: 410px;
+    margin-left: 3px;
+    overflow: hidden;
+}
+.hackathon-text h1{
+    font-size: 26px;
+    margin-top: -50px;
+}
+.hackathon marquee img{
+    margin-top: 40px;
+    width: 130px;
+    margin-left: 10px;
+}
+}
+
+ /* Product Section */
+@media screen and (max-width:420px) {
+
+ .our-products{
+    position: absolute;
+    margin-top: 90%;
+}
+.our-products .product h1{
+    position: relative;
+    margin-left: 60px;
+    font-size: 26px;
+}
+.our-products .product-cards{
+    display: flex;
+    flex-direction: column;
+}
+.our-products .card{
+    height: 150px;
+    width: 18rem;
+    font-family: roboto;
+}
+.our-products .card img{
+    width: 7rem;
+}
+.our-products .card h4{
+    font-size: 24px;
+}
+.our-products .card p{
+    font-size: 18px;
+}
+}
+
+/* Tech Avengers */
+@media screen and (max-width:420px) {
+
+.tech-avengers{
+    margin-top: 540%;
+    height: 100vh;
+    background-color: #fff;
+}
+.tech-avengers .avenger-head h1{
+    position: relative;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 26px;
+    color:#233C7B;
+}
+.tech-avengers .avenger-cards{
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 50px;
+}
+.tech-avengers .avenger-cards .card{
+    margin-top: 50px;
+    height: 250px;
+    text-align: center;
+    width: 10rem;
+}
+.tech-avengers .avenger-cards .card:hover{
+    background-color: #233C7B;
+}
+.tech-avengers .avenger-cards .card h4{
+    font-size: 16px;
+    color: #F7A654;
+}
+.tech-avengers .avenger-cards .card p{
+    font-size: 16px;
+    color: #ffffff;
+}
+.tech-avengers .avenger-cards .card .card-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 50px;
+    margin-left: 30px;
+}
+.tech-avengers .avenger-cards .card .icon .fa-linkedin{
+    font-size: 18px;
+}
+.tech-avengers .avenger-cards .card .icon .fa-youtube{
+    font-size: 18px;
+}
+}
+
+/* Our Partners */
+@media screen and (max-width:420px) {
+.our-partners{
+    margin-top: 60%;
+}
+.our-partners .partner-head h1{
+    font-size: 26px;
+}
+.our-partners .partner-cards{
+    flex-wrap: wrap;
+}
+.our-partners .partner-cards .card .card-img{
+    width: 100px;
+    height: 100px;
+    background-color: #f5f5f55d;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.our-partners .partner-cards .card .card-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+}
+
+
+/* Footer */
+@media screen and (max-width:420px) {
+.footer{
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 80%;
+    height: 280px;
+}
+.footer .footer-cards{
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.footer .footer-cards .card .card-img img{
+    width: 70px;
+    margin-left: 60px;
+}
+.footer .footer-cards .card .card-img .icons{
+    display: none;
+}
+.footer .footer-cards .card .card-img span{
+    height: 2px;
+    width: 70px;
+    margin: 20px 0px 0px -70px;
+    background-color: #F7A654;
+}
+.footer .footer-cards .card p{
+    font-size: 9px;
+    line-height: 9px;
+}
+.footer .footer-cards .card h4{
+    margin: 0px 0px 0px 10px;
+    font-size: 12px;
+}
+.footer .footer-cards .card h4 span{
+    height: 2px;
+    width: 60px;
+    margin: 20px 0px 0px -60px;
+    background-color: #F7A654;
+}
+.footer .footer-cards .card p .fa-location-dot{
+    display: none;
+}
+.footer .footer-cards .card p .fa-envelope{
+    display: none;
+}
+.iso-logo img{
+    width: 40px;
+    margin-left: 20px;
+}
+.copy-right{
+    font-size: 10px;
+}
+}
